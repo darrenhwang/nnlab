@@ -1,0 +1,7 @@
+{
+  "model_id": "3d252303-061a-4182-8a19-5f009d85ae7e",
+  "epoch": 1,
+  "accuracy": 0.3212803762948383,
+  "timestamp": "20250413_205439",
+  "type": "mock_model"
+}
