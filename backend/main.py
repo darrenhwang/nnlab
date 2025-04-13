@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .controllers import model, training
 
 app = FastAPI(
     title="NNLab API",
@@ -17,10 +16,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 注册路由
-app.include_router(model.router, prefix="/api/models", tags=["models"])
-app.include_router(training.router, prefix="/api", tags=["training"])
+# 暂时移除所有控制器
+# from controllers import evaluation
+# app.include_router(evaluation.router, prefix="/api", tags=["评估"])
+# from controllers import training
+# app.include_router(training.router, prefix="/api", tags=["训练"])
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to NNLab API"} 
+    return {"message": "Hello World"}
+
+@app.get("/api/test")
+async def test():
+    return {"status": "ok", "message": "API is working"} 

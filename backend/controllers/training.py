@@ -2,11 +2,11 @@ from fastapi import APIRouter, HTTPException, BackgroundTasks
 from typing import Dict, Any, List
 import asyncio
 import os
-from ..models.schemas.training import TrainingConfig
-from ..services.training import TrainingService
-from ..services.model import ModelService
-from ..models.domain.model import Model
-from ..services.training_history import TrainingHistoryService
+from models.schemas.training import TrainingConfig
+from services.training import TrainingService
+from services.model import ModelService
+from models.domain.model import Model
+from services.training_history import TrainingHistoryService
 
 router = APIRouter()
 training_service = TrainingService()
